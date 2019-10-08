@@ -15,4 +15,5 @@
 
     <string name="ak_login_protocol_scheme">ak465871913602533</string>
     <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>
