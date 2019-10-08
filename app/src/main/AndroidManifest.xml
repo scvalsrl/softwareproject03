@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ViewActivity"></activity>
+
+        <activity android:name=".PopUp_1_Activity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"></activity>
+        <activity android:name=".ViewActivity" />
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
@@ -53,15 +56,14 @@
         <activity
             android:name=".FacebookAccountKitActivity"
             android:screenOrientation="portrait" />
-
         <activity android:name="com.facebook.accountkit.ui.AccountKitActivity" />
+
         <meta-data
             android:name="com.facebook.accountkit.ApplicationName"
             android:value="@string/app_name" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
-
         <meta-data
             android:name="com.facebook.accountkit.ClientToken"
             android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />

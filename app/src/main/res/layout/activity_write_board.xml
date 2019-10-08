@@ -3,276 +3,141 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_img"
     android:orientation="vertical"
     tools:context=".WriteBoardActivity">
 
-    <LinearLayout
+
+
+    <EditText
+        android:hint="내용을 입력해주세요"
+        android:id="@+id/titleText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="200dp"
+        android:importantForAutofill="no"
+        android:ems="10"
+        android:textSize="20sp"
+        android:inputType="none|textPersonName"
+        android:textColorHint="@color/colorGrey"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="0dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#b0b0b0"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:text="REGISTRATION"
-            android:layout_width="415dp"
-            android:layout_height="70dp"
-            android:gravity="center_horizontal"
-            android:textSize="40sp"
-            android:textColor="#ffffffff"
-            android:background="@drawable/register_title_back"
-            android:layout_marginTop="1dp"
-            android:paddingBottom="1dp"/>
-
-        <LinearLayout
+            android:id="@+id/txt1"
+            android:text="음식메뉴"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:text="TITLE"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:gravity="center_horizontal"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:hint="title"
-                android:id="@+id/titleText"
-                android:layout_width="210dp"
-                android:layout_height="40dp"
-                android:importantForAutofill="no"
-                android:ems="10"
-                android:textSize="20sp"
-                android:inputType="none|textPersonName"
-                android:textColorHint="@color/colorGrey"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="0dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:text="GROUR"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:gravity="center_horizontal"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-
-            <Spinner
-                android:id="@+id/selectCategorySpinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:textColor="@color/colorRed"
-                android:gravity="end"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:text="PICTU"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-
-            <Button
-                android:text="UPLOAD"
-                android:id="@+id/photo_Button"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="#fff77062"
-                android:textSize="16sp"
-                android:textColor="@color/colorWhite"/>
-
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/basis_camera"
-                android:gravity="center_horizontal" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:text="START PRICE"
-                android:layout_width="160dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:textColor="#000066"
-
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/auctionStartingPrice"
-                android:hint="PRICE"
-                android:layout_width="210dp"
-                android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none|textPersonName"
-                android:textColorHint="@color/colorGrey"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="0dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:text="TRADING AREA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <RadioGroup
-                android:orientation="horizontal"
-                android:id="@+id/radio_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <RadioButton
-                    android:id="@+id/radio_location0"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="택배" />
-
-                <RadioButton
-                    android:id="@+id/radio_location1"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:text="계정위치" />
-
-                <RadioButton
-                    android:id="@+id/radio_location2"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:text="직접입력" />
-            </RadioGroup>
-
-        </LinearLayout>
-        <EditText
-            android:hint="주소를 적어주세요"
-            android:id="@+id/locationDirectInput"
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:clickable="false"
-            android:enabled="false"
-            android:focusable="false"
-            android:focusableInTouchMode="false"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:text="TIME LIMIT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
-
-            <RadioGroup
-                android:orientation="horizontal"
-                android:id="@+id/radio_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <RadioButton
-                    android:id="@+id/radio_timeLimit1"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="1시간" />
-
-                <RadioButton
-                    android:id="@+id/radio_timeLimit3"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:text="3시간" />
-
-                <RadioButton
-                    android:id="@+id/radio_timeLimit5"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:text="5시간" />
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:text="REGIST"
-                android:id="@+id/registerButton"
-                android:layout_width="110dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="150dp"
-                android:background="#fff77062"
-                android:textSize="16sp"
-                android:textColor="@color/colorWhite"/>
-            <Button
-                android:text="CANCEL"
-                android:id="@+id/cancelButton"
-                android:layout_width="110dp"
-                android:layout_height="45dp"
-                android:textSize="16sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="0dp"
-                android:background="#fff77062"
-                android:textColor="@color/colorWhite"/>
-        </LinearLayout>
+            android:textSize="30sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#b0b0b0"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="보유금액"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#b0b0b0"
+        android:layout_height="1dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="현재위치"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#b0b0b0"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="경매시간"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#b0b0b0"
+        android:layout_height="1dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="REGIST"
+            android:id="@+id/registerButton"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="150dp"
+            android:background="#fff77062"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"/>
+        \
+    </LinearLayout>
+
 </LinearLayout>
