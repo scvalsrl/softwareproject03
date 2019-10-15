@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA4atdwRNqaK1X-RrtZkjwkqo_NIPFRQfY" />
@@ -22,6 +23,11 @@
         <activity
             android:name=".PopUp_1_Activity"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+
+
+        <activity
+            android:name=".TestActivity"></activity>
+
 
         <activity android:name=".ViewActivity" />
         <activity
