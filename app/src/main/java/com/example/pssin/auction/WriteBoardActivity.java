@@ -37,8 +37,8 @@ public class WriteBoardActivity extends AppCompatActivity {
     String tradeLocation = "";
     String auctionTimeLimit = "";
     EditText titleText;
-    LinearLayout lay1;
-    TextView txt1;
+    LinearLayout lay1, lay2, lay3, lay4;
+    TextView txt1, txt2, txt3, txt4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +47,12 @@ public class WriteBoardActivity extends AppCompatActivity {
 
         titleText = (EditText) findViewById(R.id.titleText);
         lay1 = (LinearLayout)findViewById(R.id.lay1);
+        lay2 = (LinearLayout)findViewById(R.id.lay2);
+        lay3 = (LinearLayout)findViewById(R.id.lay3);
+        lay4 = (LinearLayout)findViewById(R.id.lay4);
         txt1 = (TextView)findViewById(R.id.txt1);
 
+        txt3= (TextView)findViewById(R.id.txt3);
         // 경매 시작가
         final ArrayAdapter selectCategoryAdapter = ArrayAdapter.createFromResource(this, R.array.selectCategory, android.R.layout.simple_spinner_item);
         selectCategoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -113,6 +117,15 @@ public class WriteBoardActivity extends AppCompatActivity {
 
             }
         });
+        lay3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WriteBoardActivity.this,PopUp_3_Activity.class);
+                startActivityForResult(intent, 1);
+
+
+            }
+        });
 
     }
 
@@ -124,7 +137,7 @@ public class WriteBoardActivity extends AppCompatActivity {
             if(resultCode==RESULT_OK){
                 //데이터 받기
                 String result = data.getStringExtra("result");
-                txt1.setText(result);
+                txt3.setText(result);
             }
         }
     }

@@ -47,5 +47,10 @@ dependencies {
     //          Facebook AccountKit
     //#####################################################################
     implementation 'com.facebook.android:account-kit-sdk:5.+'
-    //implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    //#####################################################################
+    //          구글맵 api
+    //#####################################################################
+    implementation 'com.google.android.gms:play-services-maps:15.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
 }
